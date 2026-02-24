@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus AI OS - Academic Workflow Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center justify-between p-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-extrabold tracking-tight">Campus AI OS</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary text-sm font-bold tracking-wide">Sign In</button>
+<button class="bg-primary text-background-dark px-4 py-2 rounded-lg text-sm font-bold">Join Waitlist</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="px-4 py-12 @container">
+<div class="flex flex-col gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6 text-center">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl">
+                        Your Academic Workflow, <span class="text-primary">Organized by AI</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal max-w-2xl mx-auto leading-relaxed">
+                        Upload your PDFs and let our AI streamline your study schedule, extract tasks, and prepare you for vivas instantly.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+<button class="flex items-center justify-center rounded-xl h-14 px-8 bg-primary text-background-dark text-base font-bold transition-transform hover:scale-105">
+                            Try It Now
+                        </button>
+<button class="flex items-center justify-center rounded-xl h-14 px-8 border-2 border-primary/30 text-slate-900 dark:text-slate-100 text-base font-bold hover:bg-primary/5">
+                            Watch Demo
+                        </button>
+</div>
+</div>
+<div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl shadow-primary/10 border border-primary/20 bg-slate-800" data-alt="Clean dashboard interface showing study schedule and tasks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBeQ24vGn-cn8-BNAnW62DyhL0H9-e90oOszNts-IGBCzk10vLBZbPxMg6SP9aqe3sb1_lh9y5oHusazZdSw_U1ZVB1zTAFTRdpGb3_GG6MkOJ4PUd_gw7ROWb-YZdTw5fRK5hB1OmhzT-_wqi4KSUT4cLivLbvRZA1z4xG68deILF6oXWBKm7kSsuYJD_FcrN_RoNk7Tqh4izqd70iSsX-hkpXQO7bBgO1p4CtefcE_CHuUx7A6g1DZi9X4wx6E1cgMQpXZw1A0V3U"); background-size: cover; background-position: center;'>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/60 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="px-4 py-16 bg-primary/5">
+<div class="max-w-7xl mx-auto">
+<div class="mb-10 text-center">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Powerful Features for Students</h2>
+<p class="text-slate-600 dark:text-slate-400 mt-2">Everything you need to ace your courses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 p-6 shadow-xl shadow-primary/5">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">AI Task Extraction</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Automatically pulls deadlines, assignments, and exam dates from your syllabus and lecture PDFs.</p>
+</div>
+</div>
+<!-- Feature Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 p-6 shadow-xl shadow-primary/5">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Smart Study Planning</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Dynamic scheduling that adapts to your learning pace and workload, ensuring you never fall behind.</p>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl border border-primary/10 bg-white dark:bg-background-dark/50 p-6 shadow-xl shadow-primary/5">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Viva Prep Assistant</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Practice with AI-generated mock interview questions tailored to your course material and previous exams.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="px-4 py-20">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight text-center mb-16">How It Works</h2>
+<div class="flex flex-col md:flex-row gap-12 items-center justify-between">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-background-dark text-2xl font-black">1</div>
+<div class="hidden md:block absolute top-1/2 left-full w-24 h-0.5 bg-primary/20 -translate-y-1/2 ml-4"></div>
+</div>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold mt-4">Upload PDFs</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Upload your syllabus, lecture notes, or textbooks.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center gap-4 flex-1">
+<div class="relative">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-background-dark text-2xl font-black">2</div>
+<div class="hidden md:block absolute top-1/2 left-full w-24 h-0.5 bg-primary/20 -translate-y-1/2 ml-4"></div>
+</div>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold mt-4">AI Processes</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Our AI analyzes your documents and extracts key dates and tasks.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center gap-4 flex-1">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-background-dark text-2xl font-black">3</div>
+<h4 class="text-slate-900 dark:text-white text-lg font-bold mt-4">Get Organized</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Your dashboard is populated with a perfect study plan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-4 py-16">
+<div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-primary to-primary/60 p-8 md:p-12 text-center text-background-dark">
+<h2 class="text-3xl font-black mb-4">Ready to supercharge your studies?</h2>
+<p class="text-lg font-medium mb-8 opacity-90">Join 5,000+ students automating their academic life.</p>
+<div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+<input class="flex-1 rounded-xl border-none px-4 py-3 text-slate-900 focus:ring-2 focus:ring-background-dark" placeholder="Enter your university email" type="email"/>
+<button class="bg-background-dark text-primary px-6 py-3 rounded-xl font-bold">Get Started</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-background-dark/80 border-t border-primary/10 px-4 py-12">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<div class="bg-primary/20 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">school</span>
+</div>
+<span class="text-slate-900 dark:text-white text-xl font-bold">Campus AI OS</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm max-w-xs">Built for students, by students. Automate the boring stuff, focus on learning.</p>
+<div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-primary text-sm">military_tech</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Hackathon 2024 Winner</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Product</h4>
+<ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Company</h4>
+<ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Legal</h4>
+<ul class="text-slate-600 dark:text-slate-400 text-sm space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-xs">© 2024 Campus AI OS. All rights reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-primary cursor-pointer">language</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-primary cursor-pointer">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
