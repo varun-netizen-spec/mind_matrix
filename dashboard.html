@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Campus AI OS - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark px-4 py-4 justify-between border-b border-primary/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+<div>
+<h1 class="text-sm font-bold leading-tight tracking-tight text-primary">Campus AI OS</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate max-w-[180px]">Lecture_Notes_CS101.pdf</p>
+</div>
+</div>
+<button class="bg-primary/10 text-primary px-3 py-1.5 rounded-lg text-xs font-bold border border-primary/20">
+                Re-upload
+            </button>
+</header>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Tabs Navigation -->
+<div class="px-4 pt-4">
+<div class="flex border-b border-slate-200 dark:border-primary/10 gap-8">
+<button class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-2">
+<span class="text-sm font-bold leading-normal">Insights</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-2">
+<span class="text-sm font-bold leading-normal">Notes</span>
+</button>
+<button class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-400 pb-2">
+<span class="text-sm font-bold leading-normal">Tasks</span>
+</button>
+</div>
+</div>
+<!-- Task List Section (Orange Accents) -->
+<section class="px-4 py-6">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Action Items</h2>
+<span class="bg-orange-500/10 text-orange-500 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">3 Pending</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-orange-500/5 border border-orange-500/10">
+<span class="material-symbols-outlined text-orange-500" style="font-variation-settings: 'FILL' 1">radio_button_unchecked</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Review Chapter 3 Algorithms</p>
+<p class="text-[10px] text-orange-500/60 font-medium">Due in 2 hours</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-primary/5 border border-transparent">
+<span class="material-symbols-outlined text-slate-400">check_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold text-slate-400 line-through">Extract Glossary</p>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Summary Section (White/Clean Space) -->
+<section class="px-4 py-4">
+<div class="bg-white dark:bg-slate-800/50 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-primary/5">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">auto_awesome</span>
+<h3 class="font-bold text-sm uppercase tracking-widest text-slate-500">AI Synthesis</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        The core focus of <span class="text-primary font-bold">Lecture 12</span> revolves around the optimization of Big-O complexity for recursive sorting. Specifically, the document highlights the tradeoff between memory overhead and execution speed in <span class="italic">Merge Sort</span>.
+                    </p>
+<div class="mt-4 flex gap-2">
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded">Recursion</span>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded">Big-O</span>
+<span class="bg-primary/10 text-primary text-[10px] px-2 py-1 rounded">Complexity</span>
+</div>
+</div>
+</section>
+<!-- Study Schedule (Teal Highlights) -->
+<section class="px-4 py-6">
+<h2 class="text-lg font-bold mb-4">Study Timeline</h2>
+<div class="space-y-4 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-primary/20">
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 size-6 rounded-full bg-primary/20 flex items-center justify-center">
+<div class="size-2 rounded-full bg-primary"></div>
+</div>
+<p class="text-[10px] font-bold text-primary uppercase">14:00 - 15:30</p>
+<p class="text-sm font-bold">Deep Work: Algorithm Analysis</p>
+<p class="text-xs text-slate-500">Library - 3rd Floor</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1.5 size-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<div class="size-2 rounded-full bg-slate-400"></div>
+</div>
+<p class="text-[10px] font-bold text-slate-400 uppercase">16:00 - 17:00</p>
+<p class="text-sm font-bold">Peer Review Session</p>
+<p class="text-xs text-slate-500">Discord Group</p>
+</div>
+</div>
+</section>
+<!-- Viva Questions (Dropdowns) -->
+<section class="px-4 py-6 mb-10">
+<h2 class="text-lg font-bold mb-4">Viva Prep</h2>
+<div class="space-y-2">
+<div class="border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-4 bg-slate-50 dark:bg-primary/5">
+<span class="text-sm font-semibold text-left">Explain the difference between T(n) and O(n)?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="border border-slate-200 dark:border-primary/10 rounded-xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-4 bg-slate-50 dark:bg-primary/5">
+<span class="text-sm font-semibold text-left">What is the space complexity of quicksort?</span>
+<span class="material-symbols-outlined text-slate-400 rotate-180">expand_more</span>
+</button>
+<div class="px-4 pb-4 bg-slate-50 dark:bg-primary/5 text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+<div class="p-3 bg-white dark:bg-background-dark rounded-lg border border-primary/10 italic">
+                                "The space complexity of Quicksort is O(log n) for the stack space used in recursive calls, though worst-case can be O(n) depending on pivot choice."
+                            </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-primary/10 bg-white/80 dark:bg-background-dark/95 backdrop-blur-md px-4 pb-6 pt-2">
+<div class="flex justify-between items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-medium leading-none">Files</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="bg-primary/20 p-2 rounded-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">memory</span>
+</div>
+<span class="text-[10px] font-bold leading-none">AI Lab</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium leading-none">Schedule</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium leading-none">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
