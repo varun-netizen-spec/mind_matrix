@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecc8",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#10221f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Login - Campus AI OS</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-background-dark text-white p-4 justify-between sticky top-0 z-50">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-background-dark rounded-lg p-1.5 flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">Campus AI OS</h2>
+</div>
+<button class="text-slate-300">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col md:flex-row h-full">
+<!-- Left Side: Login Form (Visible on Mobile) -->
+<div class="flex-1 flex flex-col justify-center px-6 py-12 bg-white dark:bg-background-dark md:max-w-md lg:max-w-lg mx-auto w-full">
+<div class="text-center md:text-left mb-8">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-[32px] font-extrabold leading-tight">Welcome Back</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal mt-2">Sign in to your academic workspace</p>
+</div>
+<form class="space-y-5">
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+<input class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="name@university.edu" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Password</label>
+<a class="text-primary text-xs font-bold hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
+<input class="w-full pl-11 pr-12 py-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                            Login
+                        </button>
+</div>
+</form>
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<span class="w-full border-t border-slate-200 dark:border-slate-800"></span>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-2 bg-white dark:bg-background-dark text-slate-500">New to Campus?</span>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary hover:bg-primary/5 font-bold py-4 rounded-xl transition-all">
+                    Create Account
+                </button>
+<p class="text-center text-slate-400 text-xs mt-8 px-8">
+                    By continuing, you agree to our Terms of Service and Privacy Policy.
+                </p>
+</div>
+<!-- Right Side: Promotional (Hidden on Mobile, visible on desktop/tablets) -->
+<div class="hidden md:flex flex-1 relative bg-gradient-to-br from-primary via-[#0fb89d] to-background-dark overflow-hidden items-center justify-center p-12">
+<div class="absolute inset-0 opacity-10" data-alt="Subtle grid pattern on dark background" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+</div>
+<div class="relative z-10 max-w-lg text-center">
+<div class="mb-12 inline-flex items-center justify-center size-24 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
+<span class="material-symbols-outlined text-5xl text-white">auto_stories</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
+                        Focus on Learning. <br/>
+<span class="text-background-dark">Let AI Handle the Planning.</span>
+</h2>
+<p class="text-white/80 text-lg font-medium max-w-md mx-auto">
+                        Join 10,000+ students using Campus AI to process lecture notes, summarize PDFs, and ace their exams.
+                    </p>
+<div class="mt-12 flex justify-center gap-4">
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="Student user avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWKtFralbtrgMhBa39KObxbJSdMCKQQhevtRvAuNgSSDBdMCJYljhuNczFyGz1zlM0CAKJKJsb6WfuCqaeO6GjSu_75qHmrvPBxUhT93t6ckQD4WFPvgCj69vi8mdUXV76W3yNNcfgLvmjY20mpjk9cw8NNuFhcB3_DLHpSBYIi8DJx4CQz20zBeGhuBLOiQhMgIQwXSTRy7We9OCLjTvtRf0CwQ6AE-1WUVgEFzRfMR_Y7uTDYg3pIzmQ9SEbNXQ_YajJRaV0bkd9"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="Student user avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0qUP14ZXimooi2J2vEW4tOYNP3-Ka6c_HyLFfHnUhN5TkMZxBbuH4IE18rpjFZdhE0C2hIp03YA3oCKWmHmEnAwuyJrqmM6oroLJVL9CfogGtE3ngR9fIIoTBmKaU7mnD3zHrqE0OvqA6-V1aq83B_ZozhS-X-gP1d_8pPjAEAyndvnWs7H0jLkBaesnW4ZInPP6ecHu6_52NH5i0JpPqCxB0CfdnVDX8Li60cLLIex8CSfVcAJ0Ywx7QxsdRju-2EIehL33VGyTo"/>
+<img alt="" class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="Student user avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQz4LgCqb7R77urWCzElL47KnUCrzoTCyqw0N51zOeLxoawUEQ42lTBZ_qDFPJUQN-kDiH0qBkwmPn5QqeOJRxfhVPzFAb74aosZRpibFx3Hc8cCd71mkCU_cokb_oNgDiYkZrwlW0QraN75JuWEG38zv5PPmH-d22mIHd1-P57kS_Ams96BtTv3YGYYoT2Z7ZvFRn-2Dp-AENF9MLnErFVYKhTOwVp6NMi5VKWcVu4CLKrD2CzDJg8E7eVewf0sOWubgc5z-InqD"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-white bg-slate-800 text-[10px] font-bold text-white">+2k</div>
+</div>
+</div>
+</div>
+<!-- Abstract academic floating elements -->
+<div class="absolute top-1/4 -right-12 size-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-1/4 -left-12 size-64 bg-background-dark/30 rounded-full blur-3xl"></div>
+</div>
+</main>
+<!-- Mobile Bottom Illustration (Spacer) -->
+<div class="md:hidden flex flex-col items-center justify-center p-8 bg-gradient-to-t from-primary/10 to-transparent">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-bold tracking-tight">AI-Powered Academic OS</span>
+</div>
+</div>
+</div>
+</body></html>
